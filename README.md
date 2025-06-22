@@ -22,7 +22,6 @@ Running the Project->
 Backend->
 cd backend
 npm run dev
-# or, in production:
 npm start
 
 Frontend->
