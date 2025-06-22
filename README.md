@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 # MarketPlus360
-=======
 MarketPlus360 is a comprehensive full‑stack market analytics platform. It provides users with real‑time market data, visual dashboards, and an intuitive web interface to gain insights and make data‑driven decisions.
 Tech Stack:
 
@@ -48,4 +46,3 @@ RUN npm install
 COPY . .
 CMD ["npm","start"]
 
->>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
