@@ -9,6 +9,10 @@ const Menu = () => {
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
   const handleProfileClick = (index) => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
   };
@@ -25,8 +29,12 @@ const Menu = () => {
             <Link
               style={{ textDecoration: "none" }}
               to="/"
+<<<<<<< HEAD
               onClick={() => handleMenuClick(0)}
             >
+=======
+              onClick={() => handleMenuClick(0)}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
               <p className={selectedMenu === 0 ? activeMenuClass : menuClass}>
                 Dashboard
               </p>
@@ -36,8 +44,12 @@ const Menu = () => {
             <Link
               style={{ textDecoration: "none" }}
               to="/orders"
+<<<<<<< HEAD
               onClick={() => handleMenuClick(1)}
             >
+=======
+              onClick={() => handleMenuClick(1)}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
               <p className={selectedMenu === 1 ? activeMenuClass : menuClass}>
                 Orders
               </p>
@@ -47,8 +59,12 @@ const Menu = () => {
             <Link
               style={{ textDecoration: "none" }}
               to="/holdings"
+<<<<<<< HEAD
               onClick={() => handleMenuClick(2)}
             >
+=======
+              onClick={() => handleMenuClick(2)}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
               <p className={selectedMenu === 2 ? activeMenuClass : menuClass}>
                 Holdings
               </p>
@@ -58,8 +74,12 @@ const Menu = () => {
             <Link
               style={{ textDecoration: "none" }}
               to="/positions"
+<<<<<<< HEAD
               onClick={() => handleMenuClick(3)}
             >
+=======
+              onClick={() => handleMenuClick(3)}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
               <p className={selectedMenu === 3 ? activeMenuClass : menuClass}>
                 Positions
               </p>
@@ -69,8 +89,12 @@ const Menu = () => {
             <Link
               style={{ textDecoration: "none" }}
               to="funds"
+<<<<<<< HEAD
               onClick={() => handleMenuClick(4)}
             >
+=======
+              onClick={() => handleMenuClick(4)}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
               <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
                 Funds
               </p>
@@ -80,8 +104,12 @@ const Menu = () => {
             <Link
               style={{ textDecoration: "none" }}
               to="/apps"
+<<<<<<< HEAD
               onClick={() => handleMenuClick(6)}
             >
+=======
+              onClick={() => handleMenuClick(6)}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
               <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
                 Apps
               </p>

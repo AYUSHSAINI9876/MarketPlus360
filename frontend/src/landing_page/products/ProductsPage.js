@@ -24,7 +24,11 @@ function PricingPage() {
       <RightSection
         imageURL="media/images/console.png"
         productName="Console"
+<<<<<<< HEAD
         productDesription="The central dashboard for your MarketPlus360 account. Gain insights into your trades and investments with in-depth reports and visualisations."
+=======
+        productDesription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations."
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
         learnMore=""
       />
       <LeftSection
@@ -52,8 +56,13 @@ function PricingPage() {
         appStore=""
       />
       <p className="text-center mt-5 mb-5">
+<<<<<<< HEAD
         Want to know more about our technology stack? Check out the MarketPlus360.tech
         blog.
+=======
+        Want to know more about our technology stack? Check out the
+        MarketPlus360.tech blog.
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
       </p>
       <Universe />
     </>

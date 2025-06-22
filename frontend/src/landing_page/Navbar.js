@@ -4,8 +4,12 @@ function Navbar() {
   return (
     <nav
       class="navbar navbar-expand-lg border-bottom"
+<<<<<<< HEAD
       style={{ backgroundColor: "#FFF" }}
     >
+=======
+      style={{ backgroundColor: "#FFF" }}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
       <div class="container p-2">
         <a class="navbar-brand" href="#">
           <img
@@ -21,8 +25,12 @@ function Navbar() {
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
+<<<<<<< HEAD
           aria-label="Toggle navigation"
         >
+=======
+          aria-label="Toggle navigation">
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

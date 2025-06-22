@@ -6,18 +6,77 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 
 const { HoldingsModel } = require("./model/HoldingsModel");
+<<<<<<< HEAD
 
+=======
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrdersModel } = require("./model/OrdersModel");
 
 const PORT = process.env.PORT || 3002;
+<<<<<<< HEAD
 const uri = process.env.MONGO_URL;
+=======
+const MONGO_URI = process.env.MONGO_URI;
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
 
 const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
 
+<<<<<<< HEAD
+=======
+app.get("/allHoldings", async (req, res) => {
+  const allHoldings = await HoldingsModel.find({});
+  res.json(allHoldings);
+});
+
+app.get("/allPositions", async (req, res) => {
+  const allPositions = await PositionsModel.find({});
+  res.json(allPositions);
+});
+
+app.post("/newOrder", async (req, res) => {
+  const newOrder = new OrdersModel({
+    name: req.body.name,
+    qty: req.body.qty,
+    price: req.body.price,
+    mode: req.body.mode,
+  });
+
+  await newOrder.save();
+  res.send("Order saved!");
+});
+
+// Connect to MongoDB first, then start the server
+// mongoose
+//   .connect(MONGO_URI, {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true,
+//   })
+//   .then(() => {
+//     console.log("✅ MongoDB connected");
+//     app.listen(PORT, () => {
+//       console.log(`🚀 Server running on http://localhost:${PORT}`);
+//     });
+//   })
+//   .catch((err) => {
+//     console.error("❌ MongoDB connection failed:", err.message);
+//   });
+mongoose
+  .connect(MONGO_URI)
+  .then(() => {
+    console.log("✅ MongoDB connected");
+    app.listen(PORT, () => {
+      console.log(`🚀 Server running on http://localhost:${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.error("❌ MongoDB connection failed:", err.message);
+  });
+
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
 // app.get("/addHoldings", async (req, res) => {
 //   let tempHoldings = [
 //     {
@@ -186,6 +245,7 @@ app.use(bodyParser.json());
 //   });
 //   res.send("Done!");
 // });
+<<<<<<< HEAD
 
 app.get("/allHoldings", async (req, res) => {
   let allHoldings = await HoldingsModel.find({});
@@ -215,3 +275,5 @@ app.listen(PORT, () => {
   mongoose.connect(uri);
   console.log("DB started!");
 });
+=======
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09

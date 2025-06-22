@@ -10,8 +10,12 @@ function Brokerage() {
           </a>
           <ul
             style={{ textAlign: "left", lineHeight: "2.5", fontSize: "12px" }}
+<<<<<<< HEAD
             className="text-mut"
           >
+=======
+            className="text-mut">
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
             <li>
               Call & Trade and RMS auto-squareoff:Additional charges of ₹50 +
               GST per order.

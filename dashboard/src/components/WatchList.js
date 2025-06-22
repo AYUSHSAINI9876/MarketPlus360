@@ -45,6 +45,10 @@ const WatchList = () => {
       },
     ],
   };
+<<<<<<< HEAD
+=======
+
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
   // export const data = {
   //   labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
   // datasets: [
@@ -143,24 +147,36 @@ const WatchListActions = ({ uid }) => {
           placement="top"
           arrow
           TransitionComponent={Grow}
+<<<<<<< HEAD
           onClick={handleBuyClick}
         >
+=======
+          onClick={handleBuyClick}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
           <button className="buy">Buy</button>
         </Tooltip>
         <Tooltip
           title="Sell (S)"
           placement="top"
           arrow
+<<<<<<< HEAD
           TransitionComponent={Grow}
         >
+=======
+          TransitionComponent={Grow}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
           <button className="sell">Sell</button>
         </Tooltip>
         <Tooltip
           title="Analytics (A)"
           placement="top"
           arrow
+<<<<<<< HEAD
           TransitionComponent={Grow}
         >
+=======
+          TransitionComponent={Grow}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
           <button className="action">
             <BarChartOutlined className="icon" />
           </button>

@@ -16,8 +16,12 @@ function Hero() {
         </p>
         <button
           className="p-2 btn btn-primary fs-5 mb-5"
+<<<<<<< HEAD
           style={{ width: "20%", margin: "0 auto" }}
         >
+=======
+          style={{ width: "20%", margin: "0 auto" }}>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
           Signup Now
         </button>
       </div>

@@ -31,10 +31,18 @@ const Summary = () => {
         </div>
         <hr className="divider" />
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
       <div className="section">
         <span>
           <p>Holdings (13)</p>
         </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
         <div className="data">
           <div className="first">
             <h3 className="profit">

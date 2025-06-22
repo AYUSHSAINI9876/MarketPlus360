@@ -8,15 +8,24 @@ function Stats() {
           <h1 className="fs-2 mb-5">Trust with confidence</h1>
           <h2 className="fs-4">Customer-first always</h2>
           <p className="text-muted">
+<<<<<<< HEAD
             That's why 1.3+ crore customers trust MarketPlus360 with ₹3.5+ lakh crores
             worth of equity investments.
+=======
+            That's why 1.3+ crore customers trust MarketPlus360 with ₹3.5+ lakh
+            crores worth of equity investments.
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
           </p>
           <h2 className="fs-4">No spam or gimmicks</h2>
           <p className="text-muted">
             No gimmicks, spam, "gamification", or annoying push notifications.
             High quality apps that you use at your pace, the way you like.
           </p>
+<<<<<<< HEAD
           <h2 className="fs-4">The Zerodha universe</h2>
+=======
+          <h2 className="fs-4">The MarketPlus360 universe</h2>
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
           <p className="text-muted">
             Not just an app, but a whole ecosystem. Our investments in 30+
             fintech startups offer you tailored services specific to your needs.
@@ -36,7 +45,11 @@ function Stats() {
               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </a>
             <a href="" style={{ textDecoration: "none" }}>
+<<<<<<< HEAD
               Try MarketPlus360 demo{" "}
+=======
+              Try Kite demo{" "}
+>>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
               <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
