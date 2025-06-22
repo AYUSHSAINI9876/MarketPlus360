@@ -9,18 +9,11 @@ function Team() {
 
       <div
         className="row p-3 text-muted"
-<<<<<<< HEAD
         style={{ lineHeight: "1.8", fontSize: "1.2em" }}
       >
         <div className="col-6 p-3 text-center">
           <img
             src="media/images/nithinKamath.jpg"
-=======
-        style={{ lineHeight: "1.8", fontSize: "1.2em" }}>
-        <div className="col-6 p-3 text-center">
-          <img
-            src="media/images/ayushSaini.jpg"
->>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
             style={{ borderRadius: "100%", width: "50%" }}
           />
           <h4 className="mt-5">Ayush Saini</h4>

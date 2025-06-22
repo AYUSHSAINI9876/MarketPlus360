@@ -13,18 +13,11 @@ function Hero() {
 
       <div
         className="row p-5 mt-5 border-top text-muted"
-<<<<<<< HEAD
         style={{ lineHeight: "1.8", fontSize: "1.2em" }}
       >
         <div className="col-6 p-5">
           <p>
             We kick-started operations on the 15th of August, 2024 with the goal
-=======
-        style={{ lineHeight: "1.8", fontSize: "1.2em" }}>
-        <div className="col-6 p-5">
-          <p>
-            We kick-started operations on the 15th of August, 2010 with the goal
->>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
             of breaking all barriers that traders and investors face in India in
             terms of cost, support, and technology. We named the company
             MarketPlus360, which takes a 360degree look over the entire share

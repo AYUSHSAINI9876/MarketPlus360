@@ -30,19 +30,11 @@ function CreateTicket() {
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-<<<<<<< HEAD
             Charges at MarketPlus360
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
             MarketPlus360 IDFC FIRST Bank 3-in-1 Account
-=======
-            Charges at Zerodha
-          </a>
-          <br />
-          <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>
-            Zerodha IDFC FIRST Bank 3-in-1 Account
->>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
           </a>
           <br />
           <a href="" style={{ textDecoration: "none", lineHeight: "2.5" }}>

@@ -18,10 +18,6 @@ ChartJS.register(
   Tooltip,
   Legend
 );
-<<<<<<< HEAD
-=======
-
->>>>>>> a74997075c113219cec9ec343c9a1ed4c2a84c09
 export const options = {
   responsive: true,
   plugins: {
