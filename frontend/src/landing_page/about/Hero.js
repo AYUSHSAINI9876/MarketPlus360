@@ -17,11 +17,11 @@ function Hero() {
       >
         <div className="col-6 p-5">
           <p>
-            We kick-started operations on the 15th of August, 2010 with the goal
+            We kick-started operations on the 15th of August, 2024 with the goal
             of breaking all barriers that traders and investors face in India in
             terms of cost, support, and technology. We named the company
-            Zerodha, a combination of Zero and "Rodha", the Sanskrit word for
-            barrier.
+            MarketPlus360, which takes a 360degree look over the entire share
+            market.
           </p>
           <p>
             Today, our disruptive pricing models and in-house technology have

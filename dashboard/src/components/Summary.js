@@ -31,12 +31,10 @@ const Summary = () => {
         </div>
         <hr className="divider" />
       </div>
-
       <div className="section">
         <span>
           <p>Holdings (13)</p>
         </span>
-
         <div className="data">
           <div className="first">
             <h3 className="profit">

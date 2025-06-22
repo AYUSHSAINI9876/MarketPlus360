@@ -8,5 +8,4 @@ const HoldingsSchema = new Schema({
   net: String,
   day: String,
 });
-
 module.exports = { HoldingsSchema };
