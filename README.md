@@ -1,6 +1,5 @@
 <<<<<<< HEAD
-# Zerodha
-Please try to implement the project on your own before proceeding to the lectures &amp; code.
+# MarketPlus360
 =======
 MarketPlus360 is a comprehensive full‑stack market analytics platform. It provides users with real‑time market data, visual dashboards, and an intuitive web interface to gain insights and make data‑driven decisions.
 Tech Stack:
