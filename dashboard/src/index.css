@@ -1,0 +1,149 @@
+:root {
+  --primary: #3b82f6;
+  --secondary: #10b981;
+  --loss: #f43f5e;
+  --profit: #10b981;
+  --bg-app: #020617; /* Deepest Navy */
+  --bg-sidebar: #0f172a;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.05);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  overflow: hidden;
+}
+
+.dashboard-container {
+  display: flex;
+  height: calc(100vh - 65px);
+  margin-top: 65px;
+}
+
+/* WatchList - Dark Mode */
+.watchlist-container {
+  width: 400px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 10px 0 30px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+.search-container {
+  padding: 20px;
+  background: rgba(2, 6, 23, 0.5);
+  border-bottom: 1px solid var(--border);
+}
+
+.search {
+  background: #1e293b;
+  border: 1px solid var(--border);
+  color: white;
+  border-radius: 6px;
+  padding: 10px 15px;
+  width: 100%;
+}
+
+.list li {
+  padding: 18px 25px;
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.list li:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.name { font-weight: 700; color: #f8fafc; }
+.price { font-weight: 700; color: #f1f5f9; }
+
+/* TopBar - Cyber Theme */
+.topbar-container {
+  height: 65px;
+  background: #0f172a;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.index-points { color: #f8fafc; }
+.index-label { color: #64748b; text-transform: uppercase; letter-spacing: 1px; font-size: 0.75rem; }
+
+.menu {
+  color: #94a3b8;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.menu.selected {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  padding: 50px 80px;
+  overflow-y: auto;
+  background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+}
+
+.order-table th {
+  background: rgba(15, 23, 42, 0.8);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 1.5px;
+}
+
+.order-table td {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+  color: #cbd5e1;
+}
+
+.profit { color: #10b981 !important; text-shadow: 0 0 10px rgba(16, 185, 129, 0.2); }
+.loss { color: #f43f5e !important; text-shadow: 0 0 10px rgba(244, 63, 94, 0.2); }
+
+/* Order Window - Floating Cyber UI */
+#buy-window {
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.1);
+}
+
+fieldset {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(2, 6, 23, 0.3);
+}
+
+legend {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  padding: 0 10px;
+}
+
+input.form-control {
+  background: transparent !important;
+  color: white !important;
+  border: none !important;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }

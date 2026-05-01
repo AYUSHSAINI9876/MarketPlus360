@@ -1,0 +1,134 @@
+:root {
+  --primary: #3b82f6;
+  --secondary: #10b981;
+  --danger: #ef4444;
+  --bg-deep: #0f172a; /* Midnight Navy */
+  --bg-card: rgba(30, 41, 59, 0.7); /* Glass Slate */
+  --text-bright: #f8fafc;
+  --text-dim: #94a3b8;
+  --border: rgba(255, 255, 255, 0.1);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-bright);
+  background: radial-gradient(circle at top right, #1e293b, #0f172a);
+  background-attachment: fixed;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border) !important;
+  padding: 1.2rem 0 !important;
+}
+
+.nav-link {
+  color: var(--text-dim) !important;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%) !important;
+  border: none !important;
+  padding: 14px 32px !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3) !important;
+  transition: var(--transition) !important;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.4) !important;
+}
+
+h1, h2, h3 {
+  background: linear-gradient(to right, #f8fafc, #cbd5e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900 !important;
+}
+
+section {
+  padding: 100px 0;
+}
+
+/* Glassmorphism Cards */
+.signup-card, .card {
+  background: var(--bg-card);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition);
+}
+
+.signup-card:hover {
+  border-color: var(--primary);
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.text-muted {
+  color: var(--text-dim) !important;
+}
+
+input.form-control {
+  background: rgba(15, 23, 42, 0.5) !important;
+  border: 1px solid var(--border) !important;
+  color: white !important;
+  border-radius: 8px !important;
+}
+
+input.form-control:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1) !important;
+}
+
+.input-group-text {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border: 1px solid var(--border) !important;
+  color: var(--text-dim) !important;
+}
+
+footer {
+  background: #0a0f1d !important;
+  border-top: 1px solid var(--border);
+  padding: 60px 0 !important;
+}
+
+footer a {
+  color: var(--text-dim);
+  transition: var(--transition);
+}
+
+footer a:hover {
+  color: var(--primary);
+}
+
+/* Custom Scrollbar for Dark Theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
