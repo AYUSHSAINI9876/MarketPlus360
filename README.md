@@ -2,6 +2,22 @@
 
 MarketPlus360 is a production-grade, full-stack trading platform clone inspired by Zerodha. It features a modernized "Midnight Cyber" dark theme, real-time asset synchronization, and a robust backend integration.
 
+---
+
+## 📸 Platform Preview
+
+| **Midnight Cyber Hero** | **Pro Trading Dashboard** |
+|:---:|:---:|
+| ![SS1](screenshots/ss1.png) | ![SS2](screenshots/ss2.png) |
+| **Order Execution** | **Holdings Visualizer** |
+| ![SS3](screenshots/ss3.png) | ![SS4](screenshots/ss4.png) |
+| **Live Positions** | **Cyber Pricing** |
+| ![SS5](screenshots/ss5.png) | ![SS6](screenshots/ss6.png) |
+| **Interactive Signup** | **Product Ecosystem** |
+| ![SS7](screenshots/ss7.png) | ![SS8](screenshots/ss8.png) |
+
+---
+
 ## ✨ Key Features
 
 - **Midnight Cyber Dark Theme**: A sophisticated, interactive dark mode with mesh gradients and glassmorphism UI.
