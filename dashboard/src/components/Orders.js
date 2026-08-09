@@ -1,14 +1,35 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect, useContext } from "react";
+import api from "../api";
+import GeneralContext from "./GeneralContext";
 
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const { refreshKey } = useContext(GeneralContext);
 
   useEffect(() => {
-    axios.get("http://localhost:3005/allOrders").then((res) => {
-      setAllOrders(res.data);
-    });
-  }, []);
+    let isMounted = true;
+    setIsLoading(true);
+    api
+      .get("/orders")
+      .then((res) => {
+        if (isMounted) setAllOrders(res.data);
+      })
+      .finally(() => {
+        if (isMounted) setIsLoading(false);
+      });
+    return () => {
+      isMounted = false;
+    };
+  }, [refreshKey]);
+
+  if (isLoading) {
+    return (
+      <div className="orders-container">
+        <h3 className="title">Loading orders...</h3>
+      </div>
+    );
+  }
 
   return (
     <div className="orders-container">
@@ -47,7 +68,6 @@ const Orders = () => {
       ) : (
         <div className="no-orders text-center mt-5">
           <p className="text-muted fs-4">You haven't placed any orders today</p>
-          <button className="btn btn-primary mt-3">Get started</button>
         </div>
       )}
     </div>

@@ -1,0 +1,51 @@
+.app-toast {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  z-index: 3000;
+  min-width: 280px;
+  max-width: 360px;
+  padding: 16px 40px 16px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: var(--text-main);
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  animation: app-toast-in 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.app-toast-error {
+  border-color: rgba(244, 63, 94, 0.5);
+}
+
+.app-toast-success {
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.app-toast-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.app-toast-close:hover {
+  color: var(--text-main);
+}
+
+@keyframes app-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

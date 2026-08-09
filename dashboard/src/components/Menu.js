@@ -1,24 +1,43 @@
 import React, { useState } from "react";
 
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import {
+  SpaceDashboardOutlined,
+  ListAltOutlined,
+  PieChartOutline,
+  BarChartOutlined,
+  AccountBalanceWalletOutlined,
+  AppsOutlined,
+} from "@mui/icons-material";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   const handleMenuClick = (index) => {
     setSelectedMenu(index);
   };
-  const handleProfileClick = (index) => {
-    setIsProfileDropdownOpen(!isProfileDropdownOpen);
+  const handleProfileClick = () => {
+    setIsProfileDropdownOpen((open) => !open);
   };
+
+  const initials = user?.name
+    ? user.name
+        .split(" ")
+        .map((part) => part[0])
+        .slice(0, 2)
+        .join("")
+        .toUpperCase()
+    : "?";
 
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
   return (
     <div className="menu-container">
-      <img src="logo.png" style={{ width: "50px" }} />
+      <img src="/logo.png" alt="MarketPlus360" style={{ width: "50px" }} />
       <div className="menus">
         <ul>
           <li>
@@ -28,7 +47,7 @@ const Menu = () => {
               onClick={() => handleMenuClick(0)}
             >
               <p className={selectedMenu === 0 ? activeMenuClass : menuClass}>
-                <i className="fa fa-tachometer-alt me-2"></i> Dashboard
+                <SpaceDashboardOutlined style={{ fontSize: "1rem" }} className="me-2" /> Dashboard
               </p>
             </Link>
           </li>
@@ -39,7 +58,7 @@ const Menu = () => {
               onClick={() => handleMenuClick(1)}
             >
               <p className={selectedMenu === 1 ? activeMenuClass : menuClass}>
-                <i className="fa fa-list-ul me-2"></i> Orders
+                <ListAltOutlined style={{ fontSize: "1rem" }} className="me-2" /> Orders
               </p>
             </Link>
           </li>
@@ -50,7 +69,7 @@ const Menu = () => {
               onClick={() => handleMenuClick(2)}
             >
               <p className={selectedMenu === 2 ? activeMenuClass : menuClass}>
-                <i className="fa fa-chart-pie me-2"></i> Holdings
+                <PieChartOutline style={{ fontSize: "1rem" }} className="me-2" /> Holdings
               </p>
             </Link>
           </li>
@@ -61,18 +80,18 @@ const Menu = () => {
               onClick={() => handleMenuClick(3)}
             >
               <p className={selectedMenu === 3 ? activeMenuClass : menuClass}>
-                <i className="fa fa-chart-bar me-2"></i> Positions
+                <BarChartOutlined style={{ fontSize: "1rem" }} className="me-2" /> Positions
               </p>
             </Link>
           </li>
           <li>
             <Link
               style={{ textDecoration: "none" }}
-              to="funds"
+              to="/funds"
               onClick={() => handleMenuClick(4)}
             >
               <p className={selectedMenu === 4 ? activeMenuClass : menuClass}>
-                <i className="fa fa-wallet me-2"></i> Funds
+                <AccountBalanceWalletOutlined style={{ fontSize: "1rem" }} className="me-2" /> Funds
               </p>
             </Link>
           </li>
@@ -83,16 +102,40 @@ const Menu = () => {
               onClick={() => handleMenuClick(6)}
             >
               <p className={selectedMenu === 6 ? activeMenuClass : menuClass}>
-                <i className="fa fa-th me-2"></i> Apps
+                <AppsOutlined style={{ fontSize: "1rem" }} className="me-2" /> Apps
               </p>
             </Link>
           </li>
 
         </ul>
         <hr />
-        <div className="profile" onClick={handleProfileClick}>
-          <div className="avatar">ZU</div>
-          <p className="username">USERID</p>
+        <div className="profile-wrapper" style={{ position: "relative" }}>
+          <div className="profile" onClick={handleProfileClick}>
+            <div className="avatar">{initials}</div>
+            <p className="username">{user?.name || "USER"}</p>
+          </div>
+          {isProfileDropdownOpen && (
+            <div
+              className="profile-dropdown"
+              style={{
+                position: "absolute",
+                bottom: "calc(100% + 8px)",
+                left: 0,
+                background: "var(--bg-sidebar)",
+                border: "1px solid var(--border)",
+                borderRadius: "8px",
+                padding: "10px",
+                minWidth: "160px",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.5)",
+                zIndex: 20,
+              }}
+            >
+              <p className="mb-2 small text-muted">{user?.mobile}</p>
+              <button className="btn btn-sm btn-outline-danger w-100" onClick={logout}>
+                Logout
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

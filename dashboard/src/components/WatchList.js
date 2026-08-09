@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useMemo } from "react";
 import GeneralContext from "./GeneralContext";
 import { Tooltip, Grow } from "@mui/material";
 import {
@@ -14,6 +14,14 @@ import { DoughnutChart } from "./DoughnoutChart";
 const labels = watchlist.map((subArray) => subArray["name"]);
 
 const WatchList = () => {
+  const [search, setSearch] = useState("");
+
+  const filteredWatchlist = useMemo(() => {
+    const term = search.trim().toLowerCase();
+    if (!term) return watchlist;
+    return watchlist.filter((stock) => stock.name.toLowerCase().includes(term));
+  }, [search]);
+
   const data = {
     labels,
     datasets: [
@@ -50,12 +58,14 @@ const WatchList = () => {
           id="search"
           placeholder="Search eg: infy, bse, nifty fut"
           className="search"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
         />
-        <span className="counts">{watchlist.length} / 50</span>
+        <span className="counts">{filteredWatchlist.length} / {watchlist.length}</span>
       </div>
 
       <ul className="list">
-        {watchlist.map((stock, index) => (
+        {filteredWatchlist.map((stock, index) => (
           <WatchListItem stock={stock} key={index} />
         ))}
       </ul>
@@ -91,20 +101,20 @@ const WatchListItem = ({ stock }) => {
           <span className="price">{stock.price}</span>
         </div>
       </div>
-      {showActions && <WatchListActions uid={stock.name} />}
+      {showActions && <WatchListActions stock={stock} />}
     </li>
   );
 };
 
-const WatchListActions = ({ uid }) => {
+const WatchListActions = ({ stock }) => {
   const generalContext = useContext(GeneralContext);
 
   const handleBuyClick = () => {
-    generalContext.openBuyWindow(uid);
+    generalContext.openBuyWindow(stock.name, stock.price);
   };
 
   const handleSellClick = () => {
-    generalContext.openSellWindow(uid);
+    generalContext.openSellWindow(stock.name, stock.price);
   };
 
   return (
@@ -129,4 +139,3 @@ const WatchListActions = ({ uid }) => {
     </div>
   );
 };
-

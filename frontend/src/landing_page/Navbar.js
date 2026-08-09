@@ -24,9 +24,6 @@ function Navbar() {
         <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
           <ul className="navbar-nav align-items-center">
             <li className="nav-item">
-              <Link className="nav-link" to="/signup">Signup</Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link" to="/about">About</Link>
             </li>
             <li className="nav-item">
@@ -37,6 +34,9 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/support">Support</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">Login</Link>
             </li>
             <li className="nav-item ms-lg-4">
                <Link to="/signup" className="btn btn-primary btn-lg shadow-sm">Open Account</Link>
